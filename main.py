@@ -7,7 +7,7 @@ class Student:
 
     """Representa a un estudiante con su identificación, nombre, calificaciones y estado académico."""
 
-    def __init__(self,id,name):
+    def __init__(self,identification,name):
         self.identification=identification
         self.name =name
         self.gradez = []
