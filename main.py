@@ -11,14 +11,14 @@ class Student:
         self.id=id
         self.name =name
         self.gradez = []
-        self.isPassed = "NO"
+        self.is_passed = "NO"
         self.honor = "?"
         self.letter = ""
 
     def addGrades(self, g):
         self.gradez.append(g)
 
-    def calcaverage(self):
+    def calc_average(self):
         t=0
         for x in self.gradez:
             t+=x
