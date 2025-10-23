@@ -1,9 +1,17 @@
-class student:
+"""
+Este módulo define la clase Student y ejecuta un ejemplo de uso
+para demostrar manejo de calificaciones, promedio y honores.
+"""
+
+class Student:
+
+    """Representa a un estudiante con su identificación, nombre, calificaciones y estado académico."""
+
     def __init__(s,id,name):
         s.id=id
         s.name =name 
         s.gradez = [] 
-        s.isPassed = "NO" 
+        s.is_passed = "NO" 
         s.honor = "?"
     def addGrades(self, g): 
         self.gradez.append(g)
@@ -28,7 +36,7 @@ class student:
         print("Final Grade = " + self.letter)
 
     def startrun():
-        a = student("x","") 
+        a = Student("x","") 
         a.addGrades(100) 
         a.addGrades("Fifty") # broken 
         a.calcaverage() 
@@ -37,3 +45,4 @@ class student:
         a.report()
 
     startrun()
+    
