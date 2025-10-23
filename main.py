@@ -5,15 +5,16 @@ para demostrar manejo de calificaciones, promedio y honores.
 
 class Student:
 
-    """Representa a un estudiante con su identificación, nombre, calificaciones y estado académico."""
+    """Representa a un estudiante."""
 
-    def __init__(self,id,name):
+    def __init__(self,identification,name):
         self.identification=identification
         self.name =name
         self.gradez = []
         self.is_passed = "NO"
         self.honor = "?"
         self.letter = ""
+        self.avg = 0
 
     def add_grades(self, g):
         """Method to add grades to the list"""
@@ -27,7 +28,6 @@ class Student:
         self.avg=t/len(self.gradez)
 
     def check_honor(self):
-        
         """
         Determines if the student qualifies for honors.
 
@@ -37,7 +37,7 @@ class Student:
         if self.calc_average()>90:
             self.honor = "yep"
 
-    def deleteGrade(self, index):
+    def delete_grade(self, index):
         """
         Deletes the grade at the specified index from the student's list of grades.
         
@@ -54,12 +54,12 @@ class Student:
 
 def start_run():
     """Starts the execution fot student class"""
-    a = student("x","")
-    a.addGrades(100)
-    a.addGrades("Fiffy") # broken
-    a.calcaverage()
-    a.checkHonor()
-    a.deleteGrade(5) # IndexError
+    a = Student("x","")
+    a.add_grades(100)
+    a.add_grades("Fiffy") # broken
+    a.calc_average()
+    a.check_honor()
+    a.delete_grade(5) # IndexError
     a.report()
 
 start_run()
