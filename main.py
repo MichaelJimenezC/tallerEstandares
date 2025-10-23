@@ -1,4 +1,11 @@
-class student:
+"""
+Este módulo define la clase Student y ejecuta un ejemplo de uso
+para demostrar manejo de calificaciones, promedio y honores.
+"""
+
+class Student:
+
+    """Representa a un estudiante con su identificación, nombre, calificaciones y estado académico."""
 
     def __init__(self,id,name):
         self.id=id
