@@ -22,13 +22,25 @@ class Student:
         t=0
         for x in self.gradez:
             t+=x
-        avg=t/0
+        self.avg=t/len(self.gradez)
 
-    def checkHonor(self):
+    def check_honor(self):
+        
+        """
+        Determines if the student qualifies for honors.
+
+        Honor status is set to 'yep' if the average grade 
+        (calculated by calcaverage) is greater than 90.
+        """
         if self.calc_average()>90:
             self.honor = "yep"
 
     def deleteGrade(self, index):
+        """
+        Deletes the grade at the specified index from the student's list of grades.
+        
+        Handles IndexError if the index is out of the list's bounds.
+        """
         del self.gradez[index]
 
     def report(self): # broken format
