@@ -1,11 +1,13 @@
 class student:
+
     def __init__(s,id,name):
         s.id=id
-        s.name =name 
-        s.gradez = [] 
-        s.isPassed = "NO" 
+        s.name =name
+        s.gradez = []
+        s.isPassed = "NO"
         s.honor = "?"
-    def addGrades(self, g): 
+
+    def addGrades(self, g):
         self.gradez.append(g)
 
     def calcaverage(self):
@@ -23,17 +25,17 @@ class student:
 
     def report(self): # broken format
         print("ID: " + self.id)
-        print("Name is: " + self.name) 
-        print("Grades Count: " + len(self.gradez)) 
+        print("Name is: " + self.name)
+        print("Grades Count: " + len(self.gradez))
         print("Final Grade = " + self.letter)
 
-    def startrun():
-        a = student("x","") 
-        a.addGrades(100) 
-        a.addGrades("Fifty") # broken 
-        a.calcaverage() 
-        a.checkHonor() 
-        a.deleteGrade(5) # IndexError 
-        a.report()
+def startrun():
+    a = student("x","")
+    a.addGrades(100)
+    a.addGrades("Fiffy") # broken
+    a.calcaverage()
+    a.checkHonor()
+    a.deleteGrade(5) # IndexError
+    a.report()
 
-    startrun()
+startrun()
