@@ -8,17 +8,19 @@ class Student:
     """Representa a un estudiante con su identificación, nombre, calificaciones y estado académico."""
 
     def __init__(self,id,name):
-        self.id=id
+        self.identification=identification
         self.name =name
         self.gradez = []
         self.is_passed = "NO"
         self.honor = "?"
         self.letter = ""
 
-    def addGrades(self, g):
+    def add_grades(self, g):
+        """Method to add grades to the list"""
         self.gradez.append(g)
 
     def calc_average(self):
+        """Method to calculate the average garde from the list"""
         t=0
         for x in self.gradez:
             t+=x
@@ -45,7 +47,7 @@ class Student:
 
     def report(self): # broken format
         """Prints the id, name , grades and finald grade of a student"""
-        print("ID: " + self.id)
+        print("ID: " + self.identification)
         print("Name is: " + self.name)
         print("Grades Count: " + len(self.gradez))
         print("Final Grade = " + self.letter)
