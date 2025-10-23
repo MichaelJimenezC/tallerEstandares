@@ -36,7 +36,6 @@ class Student:
         print("Grades Count: " + len(self.gradez))
         print("Final Grade = " + self.letter)
 
-<<<<<<< HEAD
     def startrun():
         a = Student("x","") 
         a.addGrades(100) 
